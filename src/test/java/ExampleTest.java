@@ -4,7 +4,6 @@ import java.util.List;
 import org.bukkit.Chunk;
 import org.bukkit.Material;
 import org.bukkit.World;
-import org.bukkit.block.Block;
 
 import be.seeseemelk.mockbukkit.WorldMock;
 import junit.framework.*;
@@ -17,9 +16,9 @@ public class ExampleTest extends TestCase {
     }
 
     /**
-     * This is a dummy test 
+     * This is a dummy test
      * it should not end up in plugin releases
-     */ 
+     */
     public void testExample() {
         List<Chunk> expectedNearbyChunks = new ArrayList<Chunk>();
 

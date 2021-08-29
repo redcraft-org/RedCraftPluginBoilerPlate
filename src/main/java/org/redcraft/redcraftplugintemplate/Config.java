@@ -5,14 +5,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Config {
 
-  public static String databaseUri =
-    "jdbc:sqlite:%plugin_config_path%/plugins/RedCraftPluginTemplate/database.db";
+  public static String databaseUri = "jdbc:sqlite:%plugin_config_path%/plugins/RedCraftPluginTemplate/database.db";
   public static String databaseUsername = "";
   public static String databasePassword = "";
 
   public static boolean redisEnabled = false;
   public static String redisUri = "";
-  public static String redisKeyPrefix = "rcp";
+  public static String redisKeyPrefix = "rct"; // Change this to the prefix that will be used by the plugin
 
   public static void readConfig(JavaPlugin plugin) {
     plugin.saveDefaultConfig();

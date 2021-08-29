@@ -5,15 +5,14 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name = "rcp_player_preferences")
+@Table(name = "rct_player_preferences") // Change table name prefix
 public class PlayerPreferences extends DatabaseModel {
 
   @Id
   @Column(name = "id", unique = true)
   public UUID uuid;
 
-  @Column(name = "protect_on_place")
-  public Boolean protectOnPlace;
+  // Add fields if necessary
 
   public PlayerPreferences(UUID uuid) {
     this.uuid = uuid;

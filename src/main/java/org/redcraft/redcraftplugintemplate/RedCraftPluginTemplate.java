@@ -1,8 +1,6 @@
 package org.redcraft.redcraftplugintemplate;
 
 import java.io.File;
-import java.util.Arrays;
-import java.util.List;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -42,9 +40,11 @@ public class RedCraftPluginTemplate extends JavaPlugin {
 
     // Schedulers
     BukkitScheduler scheduler = getServer().getScheduler();
+    scheduler.cancelTasks(this); // Remove this line once your schedulers are ready
 
     // Game listeners
     PluginManager pluginManager = this.getServer().getPluginManager();
+    pluginManager.disablePlugin(this); // Remove this once your listeners are ready
 
     // Commands
     this.getCommand("test").setExecutor(new TestCommand());
